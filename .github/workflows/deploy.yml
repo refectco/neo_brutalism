@@ -22,20 +22,7 @@ jobs:
       - run: flutter clean
       - run: flutter pub get
       - run: flutter build web --release
-
-      # Web deploy now is contained in build/web directory
-      - run: |
-          cd build
-          mkdir web-deploy
-          cd web-deploy
-          #! Update with your Email ID associated with GitHub
-          git config --global user.email therefectcorporation@gmail.com
-          #! Update with your username associated with GitHub
-          git config --global user.name Austin
-          git config --global init.defaultBranch main
-          git init
-          # the repository to push the deploy into
-          #! Update the following with your username and repository
-          git remote add origin https://${{secrets.commit_secret}}@github.com/refectco/neo_brutalism.git
-          git checkout -b gh-pages
-          git push origin gh-pages -f
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build/web
