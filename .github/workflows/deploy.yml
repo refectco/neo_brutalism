@@ -25,7 +25,7 @@ jobs:
 
       # Web deploy now is contained in build/web directory
       - run: |
-          cd example/build
+          cd build
           mkdir web-deploy
           cd web-deploy
           #! Update with your Email ID associated with GitHub
