@@ -4,7 +4,7 @@ class NeoContainer extends StatelessWidget {
   const NeoContainer({
     super.key,
     required this.child,
-    this.backgroundColor = Colors.white,
+    this.backgroundColor,
     this.shadowColor = Colors.black,
     this.offset = const Offset(3, 3),
     this.borderRadius = 8.0,
@@ -27,10 +27,13 @@ class NeoContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final brightness = Theme.of(context).brightness;
+    final isDark = brightness == Brightness.dark;
+
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: backgroundColor ?? Theme.of(context).scaffoldBackgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
         border: Border.all(
           color: shadowColor,

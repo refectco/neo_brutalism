@@ -37,15 +37,7 @@ jobs:
           # the repository to push the deploy into
           #! Update the following with your username and repository
           git remote add origin https://${{secrets.commit_secret}}@github.com/refectco/neo_brutalism.git
-          git fetch origin gh-pages
-          git switch gh-pages
-          # copy the build that is there in ROOT/build/web into ROOT/build/web-deploy
-          cp -R ../web/* .
-          git status
-          git add .
-          # add commit of the previous commit from main
-          echo ""
-          echo "Committing to gh-pages: ${{ github.event.head_commit.message }}"
-          echo ""
-          git commit -m "${{ github.event.head_commit.message }}"
-          git push origin gh-pages
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f

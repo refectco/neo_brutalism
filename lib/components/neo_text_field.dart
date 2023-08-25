@@ -5,7 +5,7 @@ class NeoTextField extends StatelessWidget {
     super.key,
     this.controller,
     this.hintText,
-    this.fillColor = Colors.white,
+    this.fillColor,
     this.shadowColor = Colors.black,
     this.foregroundColor,
     this.offset = const Offset(3, 3),
@@ -18,7 +18,7 @@ class NeoTextField extends StatelessWidget {
   final String? hintText;
 
   /// The color to fill the background of the text field.
-  final Color fillColor;
+  final Color? fillColor;
 
   /// The color to fill the shadow of the text field.
   final Color shadowColor;
@@ -34,7 +34,7 @@ class NeoTextField extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       decoration: BoxDecoration(
-        color: fillColor,
+        color: fillColor ?? Theme.of(context).scaffoldBackgroundColor,
         borderRadius: BorderRadius.circular(8.0),
         border: Border.all(
           color: Colors.black,
