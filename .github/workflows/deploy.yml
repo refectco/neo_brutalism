@@ -38,6 +38,6 @@ jobs:
           #! Update the following with your username and repository
           git remote add origin https://${{secrets.commit_secret}}@github.com/refectco/neo_brutalism.git
           git checkout -b gh-pages
-          git add --all
+          git add .
           git commit -m "update"
           git push origin gh-pages -f
