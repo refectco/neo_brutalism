@@ -1,5 +1,6 @@
 import 'package:example/utils/multi_value_listenable.dart';
 import 'package:example/widgets/neo_container_section.dart';
+import 'package:example/widgets/neo_fab_section.dart';
 import 'package:example/widgets/neo_icon_button_section.dart';
 import 'package:example/widgets/neo_text_field_section.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +22,7 @@ class MyApp extends StatelessWidget {
       first: themeMode,
       second: seedColor,
       builder: (context, first, second, child) {
-        final brightness = themeMode.value == ThemeMode.light
-            ? Brightness.light
-            : Brightness.dark;
+        final brightness = themeMode.value == ThemeMode.light ? Brightness.light : Brightness.dark;
 
         return MaterialApp(
           title: 'Neo Brutalism',
@@ -39,9 +38,7 @@ class MyApp extends StatelessWidget {
               seedColor.value = color;
             },
             onThemeChange: () {
-              themeMode.value = themeMode.value == ThemeMode.light
-                  ? ThemeMode.dark
-                  : ThemeMode.light;
+              themeMode.value = themeMode.value == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
             },
           ),
         );
@@ -82,12 +79,8 @@ class MyHomePage extends StatelessWidget {
           ),
           const SizedBox(width: 8.0),
           NeoIconButton(
-            icon: brightness == Brightness.light
-                ? Icons.light_mode_outlined
-                : Icons.dark_mode_outlined,
-            backgroundColor: brightness == Brightness.light
-                ? Colors.yellow.shade600
-                : Colors.blue.shade800,
+            icon: brightness == Brightness.light ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
+            backgroundColor: brightness == Brightness.light ? Colors.yellow.shade600 : Colors.blue.shade800,
             onTap: onThemeChange,
           ),
           const SizedBox(width: 16.0),
@@ -96,6 +89,8 @@ class MyHomePage extends StatelessWidget {
       body: const SingleChildScrollView(
         child: Column(
           children: [
+            NeoFabSection(),
+            Divider(height: 32.0),
             NeoIconButtonSection(),
             Divider(height: 32.0),
             NeoTextFieldSection(),
