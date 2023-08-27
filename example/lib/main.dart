@@ -2,6 +2,7 @@ import 'package:example/utils/multi_value_listenable.dart';
 import 'package:example/widgets/neo_container_section.dart';
 import 'package:example/widgets/neo_fab_section.dart';
 import 'package:example/widgets/neo_icon_button_section.dart';
+import 'package:example/widgets/neo_segmented_tab_bar_section.dart';
 import 'package:example/widgets/neo_text_field_section.dart';
 import 'package:flutter/material.dart';
 import 'package:neo_brutalism/neo_brutalism.dart';
@@ -87,16 +88,21 @@ class MyHomePage extends StatelessWidget {
         ],
       ),
       body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            NeoFabSection(),
-            Divider(height: 32.0),
-            NeoIconButtonSection(),
-            Divider(height: 32.0),
-            NeoTextFieldSection(),
-            Divider(height: 32.0),
-            NeoContainerSection(),
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              NeoFabSection(),
+              Divider(height: 32.0),
+              NeoIconButtonSection(),
+              Divider(height: 32.0),
+              NeoTextFieldSection(),
+              Divider(height: 32.0),
+              NeoContainerSection(),
+              Divider(height: 32.0),
+              NeoSegmentedTabBarSection(),
+            ],
+          ),
         ),
       ),
     );
