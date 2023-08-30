@@ -1,13 +1,14 @@
 name: neo_brutalism
 description: A new Flutter package project.
 version: 0.0.1
+homepage: https://github.com/refectco/neo_brutalism
 
 environment:
   sdk: ">=3.1.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
-  collection: ^1.18.0
+  collection: ^1.17.2
   flutter:
     sdk: flutter
 
