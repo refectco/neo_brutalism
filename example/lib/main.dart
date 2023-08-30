@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
       first: themeMode,
       second: seedColor,
       builder: (context, first, second, child) {
-        final brightness = themeMode.value == ThemeMode.light ? Brightness.light : Brightness.dark;
+        final brightness = themeMode.value == ThemeMode.light
+            ? Brightness.light
+            : Brightness.dark;
 
         return MaterialApp(
           title: 'Neo Brutalism',
@@ -39,7 +41,9 @@ class MyApp extends StatelessWidget {
               seedColor.value = color;
             },
             onThemeChange: () {
-              themeMode.value = themeMode.value == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+              themeMode.value = themeMode.value == ThemeMode.light
+                  ? ThemeMode.dark
+                  : ThemeMode.light;
             },
           ),
         );
@@ -80,8 +84,12 @@ class MyHomePage extends StatelessWidget {
           ),
           const SizedBox(width: 8.0),
           NeoIconButton(
-            icon: brightness == Brightness.light ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
-            backgroundColor: brightness == Brightness.light ? Colors.yellow.shade600 : Colors.blue.shade800,
+            icon: brightness == Brightness.light
+                ? Icons.light_mode_outlined
+                : Icons.dark_mode_outlined,
+            backgroundColor: brightness == Brightness.light
+                ? Colors.yellow.shade600
+                : Colors.blue.shade800,
             onTap: onThemeChange,
           ),
           const SizedBox(width: 16.0),
