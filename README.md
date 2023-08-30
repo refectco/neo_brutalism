@@ -1,5 +1,5 @@
 <p align="center">
-    <img src = "https://raw.githubusercontent.com/ojasjain24/neon_widgets_flutter/master/demos/pub_header.png" height = "300" width ="300"/>
+    <img src = "https://raw.githubusercontent.com/refectco/neo_brutalism/master/demos/pub_header.png" height = "300"/>
 </p>
 
 <h1 align="center">Neo Brutalism Widgets</h1>
