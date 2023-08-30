@@ -1,7 +1,8 @@
 name: neo_brutalism
 description: A new Flutter package project.
 version: 0.0.1
-homepage: https://github.com/refectco/neo_brutalism
+repository: https://github.com/refectco/neo_brutalism
+homepage: https://refectco.com
 
 environment:
   sdk: ">=3.1.0 <4.0.0"
