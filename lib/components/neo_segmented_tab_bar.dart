@@ -61,7 +61,8 @@ class NeoSegmentedTabBar extends StatelessWidget {
                   padding: const EdgeInsets.all(6.0),
                   decoration: BoxDecoration(
                     color: selectedIndex == index
-                        ? tabConfig.backgroundColor ?? Theme.of(context).colorScheme.surface
+                        ? tabConfig.backgroundColor ??
+                            Theme.of(context).colorScheme.surface
                         : Theme.of(context).colorScheme.background,
                     boxShadow: [
                       BoxShadow(
@@ -81,7 +82,8 @@ class NeoSegmentedTabBar extends StatelessWidget {
                       child: Text(
                     tab,
                     style: TextStyle(
-                      color: tabConfig.foregroundColor ?? Theme.of(context).colorScheme.onSurface,
+                      color: tabConfig.foregroundColor ??
+                          Theme.of(context).colorScheme.onSurface,
                     ),
                   )),
                 ),

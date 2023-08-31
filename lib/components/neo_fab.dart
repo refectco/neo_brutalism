@@ -96,7 +96,8 @@ class _NeoFabState extends State<NeoFab> with SingleTickerProviderStateMixin {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
-          color: widget.backgroundColor ?? Theme.of(context).scaffoldBackgroundColor,
+          color: widget.backgroundColor ??
+              Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(widget.borderRadius),
           border: Border.all(
             color: widget.shadowColor,
@@ -117,7 +118,8 @@ class _NeoFabState extends State<NeoFab> with SingleTickerProviderStateMixin {
               if (widget.icon != null)
                 Icon(
                   widget.icon,
-                  color: widget.foregroundColor ?? Theme.of(context).iconTheme.color,
+                  color: widget.foregroundColor ??
+                      Theme.of(context).iconTheme.color,
                 ),
               if (widget.text != null)
                 SizeTransition(
@@ -127,7 +129,9 @@ class _NeoFabState extends State<NeoFab> with SingleTickerProviderStateMixin {
                   child: Text(
                     widget.text!,
                     style: widget.textStyle ??
-                        TextStyle(color: widget.foregroundColor ?? Theme.of(context).iconTheme.color),
+                        TextStyle(
+                            color: widget.foregroundColor ??
+                                Theme.of(context).iconTheme.color),
                   ),
                 ),
             ],
