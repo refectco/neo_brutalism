@@ -6,7 +6,7 @@
 <h3 align="center">Commonly used flutter widgets in the Neo Brutalism style</h3>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/refectco/neo_brutalism/blob/master/LICENSE)
-[![Pub](https://img.shields.io/pub/v/neon_widgets?color=blue)](https://pub.dev/packages/neo_brutalism)
+[![Pub](https://img.shields.io/pub/v/neo_brutalism?color=blue)](https://pub.dev/packages/neo_brutalism)
 [![GitHub stars](https://img.shields.io/github/stars/refectco/neo_brutalism
 )](https://github.com/refectco/neo_brutalism)
 
