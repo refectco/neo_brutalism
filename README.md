@@ -7,15 +7,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/refectco/neo_brutalism/blob/master/LICENSE)
 [![Pub](https://img.shields.io/pub/v/neo_brutalism?color=blue)](https://pub.dev/packages/neo_brutalism)
-[![GitHub stars](https://img.shields.io/github/stars/refectco/neo_brutalism
-)](https://github.com/refectco/neo_brutalism)
+[![GitHub stars](https://img.shields.io/github/stars/refectco/neo_brutalism)](https://github.com/refectco/neo_brutalism)
 
 ## Live Example : https://neo-brutalism.web.app/
 
 ## Note
 
 This package was made because I really enjoy the aesthetic of Neo Brutalism and was using it in a few of my projects
-and wanted to create a shared package that I thought I would share with the community 
+and wanted to create a shared package that I thought I would share with the community
 
 ## Usage
 
@@ -53,6 +52,8 @@ NeoContainer(
 ```
 
 ### NeoIconButton
+
+![NeoIconButton](demos/neo_icon_button.png)
 
 A simple IconButton that can be `circle` or `rectangle`
 
@@ -110,4 +111,3 @@ final Color? backgroundColor;
 final Color? foregroundColor;
 final Color shadowColor;
 ```
-
